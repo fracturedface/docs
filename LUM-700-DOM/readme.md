@@ -4,7 +4,13 @@
 
 **Model Number:** LUM-700-DOM-IPH-WH
 
-**Resolution:** 4MP Max @ 20FPS [More Info](#res_expanded)
+**Resolution:**
+
+| Resolution | Max FPS |
+|------------|---------|
+| 2688x1520  | 20      |
+| 1920x1080  | 30      |
+| 1280x720   | 30      |
 
 **Power:** IEEE 802.11af POE (48V)
 
@@ -18,7 +24,17 @@ Before using the camera with a custom NVR, you will need to reset it to the fact
 * Phillips Head 2.0 Bit
 
 ### Step 1: Remove Outer Casing Screws
+[[images/camera_normal.jpg]]
+[[images/camera_cover_removed_2.jpg]]
+[[camera_cover_removed_1.jpg]]
 
 ### Step 2: Remove Plastic Lens Assembly Cover
+[[remove_plastic_cover.jpg]]
+[[camera_cover_removed_3.jpg]]
 
-### Step 3: Press and Hold Reset Button for 15 Seconds.
+### Step 3: Locate, Then Press and Hold Reset Button for 15 Seconds.
+[[reset_switch.jpg]]
+
+## Setting Up a DHCP Server
+
+To configure the camera, you have to set up a DHCP server so it can get an IP.
