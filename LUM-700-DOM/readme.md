@@ -37,7 +37,7 @@ Before using the camera with a custom NVR, you will need to reset it to the fact
 
 ## Setting Up a DHCP Server:
 
-To configure the camera, you have to set up a DHCP server so it can get an IP. The range it uses is `192.168.123.0-192.168.123.254`. Your computer should be configured with a static IP of `192.168.123.1` and the router configured with a static IP of `192.168.123.2`.
+To configure the camera, you have to set up a DHCP server so it can get an IP. The range it uses is `192.168.123.3-192.168.123.254`. Your computer should be configured with a static IP of `192.168.123.1` and the router configured with a static IP of `192.168.123.2`.
 
 **Subnet:** `192.168.123.0/24`
 
@@ -53,4 +53,33 @@ To configure the camera, you have to set up a DHCP server so it can get an IP. T
 
 ## Powering the Camera:
 
-The Luma LUM-700-DOM-IPH-WH uses the IEEE 802.11af POE standard. Any switch or POE injector that supports this and the wattage/voltage the camera supports should be able to power it via POE.
+The Luma LUM-700-DOM-IPH-WH uses the IEEE 802.11af POE standard. Any switch or POE injector that supports this and the wattage/voltage the camera supports should be able to power it via POE. The camera and Switch/POE Injector should negotiate and the camera should recieve power.
+
+## Finding the Cameras IP Address:
+
+After you have set up the DHCP Server, you can check the DHCP leases to see if the camera has obtained an IP address yet. If you don't see the IP Pop up, you can use `nmap` to search for the camera via this command: `nmap -v 192.168.123.0/24`.
+
+By default, the camera has a few ports open:
+
+|PORT|STATE|SERVICE|
+|----|-----|-------|
+|22/tcp|filtered|ssh|
+|80/tcp|open|http|
+|554/tcp|open|rtsp|
+|8000/tcp|open|http-alt|
+|8200/tcp|open|trivnet1|
+
+**From here on out, your camera's IP address will be referred to as `CAM_IP`.**
+
+Point your browser towards `http://CAM_IP/` and you should see a login page like the following:
+![LUMA Default Login Page](images/screenshots/login.png)
+
+The default credentials for this camera are as follows:
+
+|USERNAME|PASSWORD|
+|--------|--------|
+|admin|admin|
+
+*Note: On newer firmware versions, the camera will prompt you to create a password, and will not have hardcoded credentials.*
+
+## Changing the Cameras IP Address & Other Settings:
