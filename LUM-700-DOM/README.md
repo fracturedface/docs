@@ -1,5 +1,7 @@
 # Luma Camera Documentation
 
+**Please Note:** This documentation was written and tested to work with an older firmware version. The newer Luma cameras ship with firmware that makes you set a username & password on first boot versus the hardcoded `admin/admin` credentials outlined here. When resetting theese cameras, you may be able to set a custom password, but I am not sure if this is true or not. 
+
 ## Specifications:
 
 **Model Number:** LUM-700-DOM-IPH-WH
