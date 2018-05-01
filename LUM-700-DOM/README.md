@@ -1,0 +1,1 @@
+This repository contains information for connecting a Luma LUM-700-DOM-IPH-WH or LUM-700-DOM-IPH-BL to a standard NVR like Blue Iris or Zoneminder. With enough modification this should also work for other cameras in the Luma lineup.
