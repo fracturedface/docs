@@ -83,3 +83,29 @@ The default credentials for this camera are as follows:
 *Note: On newer firmware versions, the camera will prompt you to create a password, and will not have hardcoded credentials.*
 
 ## Changing the Cameras IP Address & Other Settings:
+
+When you log in, you will see this if you aren't on safari with the Luma plugin: 
+
+![LUMA Homepage](images/screenshots/interface.png)
+
+Click the gears on the right sidebar.
+
+![Gears Icon](images/screenshots/gears.png)
+
+This will bring you to the main settings page.
+
+![Settings Page](images/screenshots/settings_mainpage.png)
+
+Using the left sidebar, navigate to "Basic Network Settings"
+
+![Basic Network Settings Tab](images/screenshots/network_tab.png)
+
+Under this menu, you can change the cameras IP address, and ports for different services.
+
+![Network Settings Menu 1](images/screenshots/network_settings.png)
+
+## Using The Cameras RTSP Stream:
+
+The default RTSP port on the camera is 554. The url is formatted like this: `rtsp://CAM_IP/Streaming/channels/101`
+
+If you have set custom credentials on your camera, you can use this format: `rtsp://username:password@192.168.1.20/Streaming/channels/101`
